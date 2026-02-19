@@ -1,0 +1,12 @@
+name: Deploy to Production
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Déploiement en cours par Alain-Geremy"
+      - run: echo "TOKEN est ${{ secrets.DEPLOY_TOKEN }}"
